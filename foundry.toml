@@ -1,0 +1,17 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+remappings = [
+    "@chainlink/contracts/=lib/chainlink-evm/contracts/",
+    "@openzeppelin/contracts@4.9.6/=lib/openzeppelin-contracts/contracts/",
+    "forge-std/=lib/forge-std/src/",
+    "@solemate=lib/solmate/src/",
+]
+fs_permissions = [
+    { access = "read", path = "./broadcast" },
+    { access = "read", path = "./reports" },
+]
+sender = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
